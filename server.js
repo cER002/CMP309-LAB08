@@ -104,6 +104,7 @@ app.get('/{*splat}', (req, res) => {
         res.status(404).json({
             "error": "Not found"
         })
+        return
     }
 
     res.status(404).send("Page Not Found")
