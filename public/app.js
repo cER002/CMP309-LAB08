@@ -12,7 +12,7 @@ const callApi = async (path, method = "GET") => {
     try {
         const res = await fetch(path, { method })
         outputHeader.textContent = `Status code: ${res.status}`
-        outputBody.textContent = res.body
+        outputBody.textContent = await res.text()
     } catch (e) {
         outputHeader.textContent = 'A fetch error has occured!'
         outputBody.textContent = 'fetch threw an error'
