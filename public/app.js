@@ -20,3 +20,10 @@ const callApi = async (path, method = "GET") => {
     }
 }
 
+coursesBtn.addEventListener('click', () => callApi('/api/courses'))
+statusBtn.addEventListener('click', () => callApi('/api/status'))
+headersBtn.addEventListener('click', () => callApi('/api/headers'))
+subscribeBtn.addEventListener('click', () => callApi('/api/subscribe', 'POST'))
+adminBtn.addEventListener('click', () => callApi('/api/admin'))
+statsBtn.addEventListener('click', () => callApi('/api/stats'))
+failBtn.addEventListener('click', () => callApi('/api/nonexistent'))
