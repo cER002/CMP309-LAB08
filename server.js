@@ -1,15 +1,3 @@
-// const handler = (req, res, next) => {
-
-// }
-
-// app.use((req, res, next) => {
-//     // code
-
-//     next()
-// }) // generic middleware
-
-// app.use(handler) // better way for the 2 middleware they must be like this
-
 import express from 'express';
 import path from 'node:path';
 
@@ -79,7 +67,7 @@ app.get('/api/headers', (req, res) => {
     })
 })
 
-app.get('/api/subscribe', (req, res) => {
+app.post('/api/subscribe', (req, res) => {
     res.status(201).json({
         "subscribed": true
     })
